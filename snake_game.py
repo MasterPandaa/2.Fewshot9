@@ -1,6 +1,7 @@
-import pygame
 import random
 import sys
+
+import pygame
 
 # -----------------------------
 # Konfigurasi dasar
@@ -58,7 +59,9 @@ def game_over_screen(surface, score, font_big, font_small):
     surface.blit(info, info_rect)
 
     score_text = font_small.render(f"Final Score: {score}", True, WHITE)
-    score_rect = score_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 50))
+    score_rect = score_text.get_rect(
+        center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 50)
+    )
     surface.blit(score_text, score_rect)
 
     pygame.display.flip()
